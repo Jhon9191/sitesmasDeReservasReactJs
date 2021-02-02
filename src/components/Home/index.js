@@ -4,6 +4,7 @@ import { MdFlightTakeoff } from 'react-icons/md';
 
 import api from '../../Services/api';
 import './styles.css';
+import { addReserve } from '../../Store/Modules/Reserva/actions';
 
 export default function Reservas() {
   const dispacth = useDispatch();
@@ -19,10 +20,7 @@ export default function Reservas() {
   }, [])
 
   function handleDados(trip) {
-    dispacth({
-      type: "ADD_RESERVE",
-      trip
-    });
+    dispacth(addReserve(trip))
   }
 
   return (
