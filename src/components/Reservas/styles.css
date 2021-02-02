@@ -1,0 +1,28 @@
+.titulo{
+    color: #FFF;
+}
+
+.reservas{
+    padding: 20px;
+    margin-top: 10px;
+    background-color: #FFF;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}.reservas img{
+    width: 100px;
+}.reservas button{
+    border: 0;
+    background-color: #FFF;
+}
+
+footer button{
+    border: 0;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-weight: bold;
+    display: flex;
+    padding: 10x;
+    text-transform: uppercase;
+}

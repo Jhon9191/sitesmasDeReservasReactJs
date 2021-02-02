@@ -1,0 +1,29 @@
+.Header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    padding: 10px;
+}
+.text-bootons{
+    color: burlywood;
+}
+.logo{
+    width: 110px;
+    height: 110px;
+}
+
+.reserva{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}.reserva div{
+    text-align: right;
+    margin-right: 10px;
+}.reserva strong{
+    color: #FFF;
+    display: block;
+}.reserva span{
+    color: #DDD;
+    font-size: 15px;
+}
