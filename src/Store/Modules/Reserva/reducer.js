@@ -2,7 +2,7 @@ import produce from 'immer'
 
 export default function reserve(state = [], action) {
     switch (action.type) {
-        case 'ADD_RESERVE_SUCESS':
+        case 'ADD_RESERVE_SUCCESS':
             return produce(state, draft => {
                 draft.push(action.trip);
             });
@@ -13,12 +13,7 @@ export default function reserve(state = [], action) {
                     draft.splice(tripIndex, 1);
                 }
             });
-        case 'UPDATE_RESERVE': {
-
-            if(action.amount <= 0){
-                return(state);
-            }
-
+        case 'UPDATE_RESERVE_SUCCESS': {
             return produce(state, draft => {
                 const tripIndex = draft.findIndex(trip => trip.id === action.id);
                 if (tripIndex >= 0) {

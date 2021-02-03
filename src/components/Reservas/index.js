@@ -4,7 +4,7 @@ import { MdDelete, MdAddCircle, MdRemoveCircle } from 'react-icons/md';
 import { useSelector } from 'react-redux';
 
 import './styles.css';
-import { removeReserva, updateAmount } from '../../Store/Modules/Reserva/actions';
+import { removeReserva, updateAmountRequest } from '../../Store/Modules/Reserva/actions';
 
 export default function Reservas() {
   const reserves = useSelector(state => state.reserve);
@@ -15,11 +15,11 @@ export default function Reservas() {
   }
 
   function addAmount(trip){
-    dispatch(updateAmount(trip.id, trip.amount + 1))
+    dispatch(updateAmountRequest(trip.id, trip.amount + 1))
   }
 
   function removeAmount(trip){
-    dispatch(updateAmount(trip.id, trip.amount - 1))
+    dispatch(updateAmountRequest(trip.id, trip.amount - 1))
   }
 
   return (
