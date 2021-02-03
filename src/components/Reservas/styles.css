@@ -26,3 +26,14 @@ footer button{
     padding: 10x;
     text-transform: uppercase;
 }
+
+.quantidadeReservas{
+    display: flex;
+    align-items: center;
+}.quantidadeReservas input{
+    text-align: center;
+    border-color: black;
+    border-width: 1px;
+    width: 45px;
+    border-radius: 30px;
+}
