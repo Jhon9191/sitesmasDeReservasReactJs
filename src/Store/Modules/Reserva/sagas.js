@@ -1,10 +1,10 @@
 import { call, put, all, takeLatest, select } from 'redux-saga/effects';
-import api from '../../../Services/api';
 import { addReserveSuccess, updateAmountSuccess, updateAmountRequest } from './actions';
 
+import api from '../../../Services/api';
+import history from '../../../Services/history';
 
 function* addToReserve( { id } ){
-    
     const tripExist = yield select(
         state => state.reserve.find(trip => trip.id === id)
     );
@@ -33,6 +33,7 @@ function* addToReserve( { id } ){
         }
 
         yield put(addReserveSuccess(data));
+        history.push("/Reservas")
     }
 }
 

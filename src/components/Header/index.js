@@ -14,7 +14,7 @@ export default function Header() {
                     <img className="logo" src={logo} alt="logo"/>
                 </Link>
 
-                <Link className="reserva" to="/Reserva">
+                <Link className="reserva" to="/Reservas">
                     <div className="text-bootons">
                         <strong>Minhas reservas</strong>
                         <span>{sizeReservas.length} reservas</span>

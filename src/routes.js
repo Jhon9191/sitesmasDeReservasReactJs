@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import Home from './components/Home'
@@ -9,7 +9,7 @@ export default function Routes() {
     return (
       <Switch>
           <Route path="/" exact component={Home}/>
-          <Route path="/Reserva" component={Reservas}/>
+          <Route path="/Reservas" component={Reservas}/>
       </Switch>
     );
    }
