@@ -4,7 +4,7 @@ import { MdFlightTakeoff } from 'react-icons/md';
 
 import api from '../../Services/api';
 import './styles.css';
-import { addReserve } from '../../Store/Modules/Reserva/actions';
+import { addReserveRequest } from '../../Store/Modules/Reserva/actions';
 
 export default function Reservas() {
   const dispacth = useDispatch();
@@ -19,8 +19,8 @@ export default function Reservas() {
     loadingApi();
   }, [])
 
-  function handleDados(trip) {
-    dispacth(addReserve(trip))
+  function handleDados(id) {
+    dispacth(addReserveRequest(id))
   }
 
   return (
@@ -33,7 +33,7 @@ export default function Reservas() {
               <strong>{trip.title}</strong>
               <span>Status: {trip.status ? "Disponivel" : "Indisponivel"}</span>
               <button type="button"
-                onClick={() => handleDados(trip)}>
+                onClick={() => handleDados(trip.id)}>
                 <div>
                   <MdFlightTakeoff size={16} color="#FFF" />
                 </div>
